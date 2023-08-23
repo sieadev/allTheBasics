@@ -34,7 +34,7 @@ public class healPlayer {
         }
 
         target.setHealth(target.getMaxHealth());
-        p.sendMessage(ChatColor.YELLOW + "You healed " + target.getDisplayName() + ChatColor.YELLOW + " for §c" + Math.round(missingHealth) + "§c❤");
+        p.sendMessage(ChatColor.YELLOW + "You healed §r" + target.getDisplayName() + ChatColor.YELLOW + " for §c" + Math.round(missingHealth) + "§c❤");
         target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " healed you for §c" + Math.round(missingHealth) + "§c❤");
     }
 }

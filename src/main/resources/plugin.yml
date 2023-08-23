@@ -27,7 +27,7 @@ permissions:
         description: use /fly
       freeze:
         description: use /freeze
-      tp:
+      teleport:
         description: use /tp
       vanish:
         description: use /vanish
