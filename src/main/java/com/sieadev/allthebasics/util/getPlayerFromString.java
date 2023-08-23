@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 import static org.bukkit.Bukkit.getServer;
 
 public class getPlayerFromString {
-    public Player getPlayerFromString(Player p, String target){
+    public static Player getPlayerFromString(Player p, String target){
         try {
             Player t = getServer().getPlayerExact(target);
             return t;
@@ -21,7 +21,7 @@ public class getPlayerFromString {
         }
 
     }
-    public Player getPlayerFromStringNoPlayer(String target){
+    public static Player getPlayerFromStringNoPlayer(String target){
         try {
             Player t = getServer().getPlayerExact(target);
             return t;
