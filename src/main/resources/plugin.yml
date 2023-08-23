@@ -10,7 +10,27 @@ permissions:
       gamemode:
         children:
           creative:
+            description: use /gm creative
           spectator:
+            description: use /gm spectator
           survival:
+            description: use /gm survival
           adventure:
+            description: use /gm adventure
       fakeop:
+        description: use /fakeop
+      heal:
+        description: use /heal
+      feed:
+        description: use /feed
+      fly:
+        description: use /fly
+      freeze:
+        description: use /freeze
+      tp:
+        description: use /tp
+      vanish:
+        description: use /vanish
+      disguise:
+        description:  use /disguise
+
