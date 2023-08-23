@@ -1,0 +1,16 @@
+name: allTheBasics
+version: '${project.version}'
+main: com.sieadev.allthebasics.AllTheBasics
+api-version: 1.20
+author: sieadev
+description: All the basics your minecraft Server needs
+permissions:
+  atb:
+    children:
+      gamemode:
+        children:
+          creative:
+          spectator:
+          survival:
+          adventure:
+      fakeop:
