@@ -20,7 +20,7 @@ permissions:
       fakeop:
         description: use /fakeop
       heal:
-        description: use /heal
+        description: use /healPlayer
       feed:
         description: use /feed
       fly:
