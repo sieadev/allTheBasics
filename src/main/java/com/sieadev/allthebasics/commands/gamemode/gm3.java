@@ -24,7 +24,7 @@ This function implements the /gm spectator command
         if (command.getName().equalsIgnoreCase("gm")) {
             if (args.length > 0 && args[0].equalsIgnoreCase("spectator")) {
               if (player.hasPermission("-Insert permission here-")) {
-                player.setGameMode(GameMode.CREATIVE);
+                player.setGameMode(GameMode.SPECTATOR);
                 player.sendMessage("§cYour gamemode has been updated to spectator.");
                 return true;
             }
