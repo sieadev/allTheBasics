@@ -1,5 +1,12 @@
 package com.sieadev.allthebasics.commands.gamemode;
 
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.GameMode;
+import org.bukkit.plugin.java.JavaPlugin;
+
 public class gm3 implements CommandExecutor{
 /*
 This function implements the /gm spectator command
