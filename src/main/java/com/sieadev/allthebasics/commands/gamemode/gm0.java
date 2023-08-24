@@ -24,9 +24,9 @@ This function implements the /gm creative command
       // Inserting of permission pending
         Player player = (Player) sender;
         if (command.getName().equalsIgnoreCase("gm")) {
-            if (args.length > 0 && args[0].equalsIgnoreCase("hardcore")) {
+            if (args.length > 0 && args[0].equalsIgnoreCase("ADVENTURE")) {
               if (player.hasPermission("-Insert permission here-")) {
-                player.setGameMode(GameMode.CREATIVE);
+                player.setGameMode(GameMode.ADVENTURE);
                 player.sendMessage("§cYour gamemode has been updated to hardcore.");
                 return true;
             }
