@@ -1,0 +1,32 @@
+# AllTheBasics - atb
+# Repository: https://github.com/sieadev/allTheBasics
+# Authors: siea , LevelMC
+
+
+#             Contact siea:
+# Discord - dsc.gg/siea || @sieadev
+# Github - https://github.com/sieadev
+
+#             Contact LevelMC:
+# Github - https://github.com/LevelMC
+
+# How to use the config:
+# For colored text use ColourCodes exp: "&c" for red
+# Use %player% to pass in the Player
+# For Messages with "[]" you may pass in multiple. The outcome will be randomized
+
+prefix: "§b[ATB]"
+
+# Chat Settings
+alternateColorCodes: true
+calculateMathEquations: true
+highlightCoordinates: true
+highlightNumbers: true
+highlightPlayerName: true
+
+# Language settings
+# /This is currently not supported/
+language: "English"
+
+
+
