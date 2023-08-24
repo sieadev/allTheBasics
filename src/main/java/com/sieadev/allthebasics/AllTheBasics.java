@@ -1,15 +1,21 @@
 package com.sieadev.allthebasics;
 
+import com.sieadev.allthebasics.commands.gamemode.gm0;
+import com.sieadev.allthebasics.commands.gamemode.gm1;
+import com.sieadev.allthebasics.commands.gamemode.gm2;
+import com.sieadev.allthebasics.commands.gamemode.gm3;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class AllTheBasics extends JavaPlugin {
 
 
-
     @Override
     public void onEnable() {
         sendConsoleMessage("Attempting to start ATB");
-
+        getCommand("gm").setExecutor(new gm0);
+        getCommand("gm").setExecutor(new gm1);
+        getCommand("gm").setExecutor(new gm2);
+        getCommand("gm").setExecutor(new gm3);
     }
 
     @Override
