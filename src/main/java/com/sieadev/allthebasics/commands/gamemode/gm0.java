@@ -10,29 +10,31 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class gm0 implements CommandExecutor {
 
-  
 /*
 This function implements the /gm creative command
 */
-@Override
+  
+    @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage("This command can only be run by a player.");
+            sender.sendMessage("§cYou can't use this command in the console.");
             return true;
         }
 
-      
+      // Inserting of permission pending
         Player player = (Player) sender;
-
-        // Inserting of permission pending
-        if (label.equalsIgnoreCase("gm") && args.length == 1 && args[0].equalsIgnoreCase("creative")) {
-            if (player.hasPermission("-Insert permission here-")) {
+        if (command.getName().equalsIgnoreCase("gm")) {
+            if (args.length > 0 && args[0].equalsIgnoreCase("hardcore")) {
+              if (player.hasPermission("-Insert permission here-")) {
                 player.setGameMode(GameMode.CREATIVE);
-                player.sendMessage("§cYour gamemode has been updated to creative.");
-            } else {
-                player.sendMessage("§cYou do not have permission to use this command.");
+                player.sendMessage("§cYour gamemode has been updated to hardcore.");
+                return true;
             }
-            return true;
+              else{
+                player.sendMessage("§cYou don't have the necessary permissions to perform this command.");
+              }
+              
+            }
         }
         return false;
     }
