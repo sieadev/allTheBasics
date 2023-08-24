@@ -1,5 +1,9 @@
 package com.sieadev.allthebasics;
 
+import com.sieadev.allthebasics.commands.gamemode.gm0;
+import com.sieadev.allthebasics.commands.gamemode.gm1;
+import com.sieadev.allthebasics.commands.gamemode.gm2;
+import com.sieadev.allthebasics.commands.gamemode.gm3;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class AllTheBasics extends JavaPlugin {
