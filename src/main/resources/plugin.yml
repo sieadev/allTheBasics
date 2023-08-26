@@ -34,3 +34,23 @@ permissions:
       disguise:
         description:  use /disguise
 
+commands:
+  tp:
+    permission: administration.tp
+    usage: /tp <player>
+    description: Teleport to a player
+  heal:
+    permission: administration.heal
+    usage: /heal <player>
+    description: heal a player
+    alias: h
+  feed:
+    permission: administration.feed
+    usage: /heal <player>
+    description: feed a player
+    alias: f
+  fakeop:
+    permission: administration.fakeop
+    usage: /fakeop <player>
+    description: give a player fake OP
+
