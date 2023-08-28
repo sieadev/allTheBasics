@@ -24,7 +24,7 @@ public class feedPlayer {
         }
 
         target.setFoodLevel(20);
-        p.sendMessage(ChatColor.YELLOW + "You fed §r" + p.getDisplayName());
+        p.sendMessage(ChatColor.YELLOW + "You fed §r" + target.getDisplayName());
         target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " fed you.");
     }
 }
