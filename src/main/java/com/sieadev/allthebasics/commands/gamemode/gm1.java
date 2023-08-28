@@ -12,10 +12,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class gm1 implements CommandExecutor {
 
   
-/*
-This function implements the /gm creative command
-*/
-  
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;

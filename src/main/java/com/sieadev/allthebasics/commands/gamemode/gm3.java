@@ -9,9 +9,6 @@ import org.bukkit.GameMode;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class gm3 implements CommandExecutor{
-/*
-This function implements the /gm spectator command
-*/
   
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
