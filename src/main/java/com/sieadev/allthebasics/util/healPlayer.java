@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 public class healPlayer {
     public static void heal(Player p, String t){
-        if (!(p.hasPermission("atb.healPlayer"))){
+        if (!p.hasPermission("atb.heal")){
             p.sendMessage("§cYou don't have the required permissions to use this command.");
             return;
         }

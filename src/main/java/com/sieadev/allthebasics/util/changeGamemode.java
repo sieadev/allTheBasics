@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 
 public class changeGamemode {
     public static void changeGamemode(Player p, String t, GameMode gm){
-        if (!p.hasPermission("administrator." + gm.name())){
+        if (!p.hasPermission("atb.gamemode." + gm.name())){
             p.sendMessage("§cYou don't have the required permissions to use this command.");
             return;
         }

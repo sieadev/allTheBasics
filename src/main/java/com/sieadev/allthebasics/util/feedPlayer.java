@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 
 public class feedPlayer {
     public static void feedPlayer(Player p, String t){
-        if (!(p.hasPermission("rank.admin") || p.hasPermission("administration.feed"))){
+        if (!p.hasPermission("atb.feed")){
             p.sendMessage("§cYou don't have the required permissions to use this command.");
             return;
         }
