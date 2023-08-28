@@ -1,5 +1,6 @@
 package com.sieadev.allthebasics.commands.gamemode;
 
+import com.sieadev.allthebasics.util.changeGamemode;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
@@ -17,26 +18,19 @@ This function implements the /gm creative command
   
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("§cYou can't use this command in the console.");
+        Player player = (Player) sender;
+
+        if (!(sender instanceof Player)){
+            sender.sendMessage("§cYou can not use this command in the Console.");
+        }
+        Player p = (Player) sender;
+        if (args.length > 0){
+            String target = args[0];
+            changeGamemode.changeGamemode(p, target, GameMode.CREATIVE);
             return true;
         }
-
-      // Inserting of permission pending
-        Player player = (Player) sender;
-        if (command.getName().equalsIgnoreCase("gm")) {
-            if (args.length > 0 && args[0].equalsIgnoreCase("creative")) {
-              if (player.hasPermission("-Insert permission here-")) {
-                player.setGameMode(GameMode.CREATIVE);
-                player.sendMessage("§cYour gamemode has been updated to creative.");
-                return true;
-            }
-              else{
-                player.sendMessage("§cYou don't have the necessary permissions to perform this command.");
-              }
-              
-            }
+        changeGamemode.changeGamemode(p, null, GameMode.CREATIVE);
+        return true;
         }
-        return false;
     }
-}
+
