@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 public class tpPlayer {
     public static void tpPlayer(Player p, String t, String t2){
-        if (!(p.hasPermission("atb.teleport"))){
+        if (!p.hasPermission("atb.teleport")){
             p.sendMessage("§cYou don't have the required permissions to use this command.");
             return;
         }
