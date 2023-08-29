@@ -30,6 +30,7 @@ ATB contains everything necessary for your Minecraft Server!
 
 - [@sieadev](https://www.github.com/sieadev)
 - [@LevelMC](https://www.github.com/LevelMC)
+- [@ardaaksu](https://www.github.com/aarda55)
 
 ## License
 
