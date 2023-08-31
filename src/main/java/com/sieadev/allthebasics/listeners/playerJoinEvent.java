@@ -1,4 +1,6 @@
 package com.sieadev.allthebasics.listeners;
 
-public class playerJoinEvent {
+import org.bukkit.event.Listener;
+
+public class playerJoinEvent implements Listener {
 }

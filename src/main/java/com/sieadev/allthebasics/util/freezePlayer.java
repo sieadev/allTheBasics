@@ -1,15 +1,15 @@
 package com.sieadev.allthebasics.util;
 
+import com.sieadev.allthebasics.events.frozenPlayerEvent;
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
+
+import java.util.HashMap;
+
 public class freezePlayer {
 	public static void freezePlayer(Player p, String t){
         if (!p.hasPermission("atb.freeze")){
             p.sendMessage("§cYou don't have the required permissions to use this command.");
-            return;
-        }
-
-        if (t == null){
-            freeze(p);
-            p.sendMessage(ChatColor.YELLOW + "You healed yourself for §c" + Math.round(missingHealth) + "§c❤");
             return;
         }
 
@@ -19,12 +19,11 @@ public class freezePlayer {
             return;
         }
 
-        freeze(target);
-        p.sendMessage(ChatColor.YELLOW + "You froze §r" + target.getDisplayName());
-        target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " froze you");
+        freeze(target, p);
     }
 
-	public static void freeze(Player p){
-         //Implement Freeze Method
+	public static void freeze(Player target, Player user){
+        frozenPlayerEvent.toggleFreeze(target, user);
     }
+
 }

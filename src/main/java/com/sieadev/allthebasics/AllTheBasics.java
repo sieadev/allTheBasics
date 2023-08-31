@@ -4,6 +4,8 @@ import com.sieadev.allthebasics.commands.*;
 import com.sieadev.allthebasics.commands.gamemode.*;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
+import com.sieadev.allthebasics.events.*;
+import com.sieadev.allthebasics.listeners.*;
 
 public final class AllTheBasics extends JavaPlugin {
 
@@ -30,6 +32,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("feed").setExecutor(new feed());
             getCommand("fakeop").setExecutor(new fakeop());
             getCommand("fly").setExecutor(new fly());
+            getCommand("freeze").setExecutor(new freeze());
             getCommand("gm0").setExecutor(new gm0());
             getCommand("gm1").setExecutor(new gm1());
             getCommand("gm2").setExecutor(new gm2());
@@ -37,6 +40,15 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("gm").setExecutor(new gm());
         } catch (Exception e) {
             System.err.println("An error occurred when loading in Commands: " + e.getMessage());
+            this.errors = errors + 1;
+        }
+
+        try {
+            getServer().getPluginManager().registerEvents(new frozenPlayerEvent(), this);
+            getServer().getPluginManager().registerEvents(new PlayerChatEvent(), this);
+            getServer().getPluginManager().registerEvents(new playerJoinEvent(), this);
+        } catch (Exception e) {
+            System.err.println("An error occurred when loading in Events and/or Listeners: " + e.getMessage());
             this.errors = errors + 1;
         }
 
