@@ -31,5 +31,14 @@ highlightPlayerName: true
 # /This is currently not supported/
 language: "English"
 
+# Freeze
+# Customize the way /freeze takes effect
+freezeMovement: true
+freezeInteraction: true
+freezeChat: false
+freezeInventoryOpen: true
+freezeInventoryClick: true
+freezeCombat: false #This will deactivate all kinds of combat this player is part of // incoming and outgoing
+freezeOutgoingCombat: true
 
 
