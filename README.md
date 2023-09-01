@@ -22,7 +22,7 @@ ATB contains everything necessary for your Minecraft Server!
     - /fakeop
 #### 3. Fully Customizable Config
     - change prefix
-    - choose the way /freeze effects
+    - choose the way /freeze effects players
     - set language
 
     
