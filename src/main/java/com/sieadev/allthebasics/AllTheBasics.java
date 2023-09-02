@@ -33,7 +33,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("fakeop").setExecutor(new fakeop());
             getCommand("fly").setExecutor(new fly());
             getCommand("freeze").setExecutor(new freeze());
-            getCommand("timer").setExecutor(new timer());
+            getCommand("timer").setExecutor(new timer(this));
             getCommand("gm0").setExecutor(new gm0());
             getCommand("gm1").setExecutor(new gm1());
             getCommand("gm2").setExecutor(new gm2());
