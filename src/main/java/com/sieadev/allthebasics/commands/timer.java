@@ -15,7 +15,8 @@ public class timer implements CommandExecutor {
 
 /*
 Implements the /timer start/stop command
-  */
+*/
+    
 @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("timer")) {
@@ -66,7 +67,7 @@ Implements the /timer start/stop command
     private void updateActionBar(Player player) {
         if (timerRunning) {
             long currentTime = System.currentTimeMillis();
-            long elapsedTime = (currentTime - startTime) / 1000; // Elapsed time in seconds
+            long elapsedTime = (currentTime - startTime) / 1000;
             player.sendActionBar("§cTimer: " + elapsedTime + " §cseconds");
         }
     }
