@@ -53,4 +53,6 @@ commands:
     permission: administration.fakeop
     usage: /fakeop <player>
     description: give a player fake OP
-
+  timer:
+    usage: /timer <start/stop>
+    description: starts or stops a personal timer for a player
