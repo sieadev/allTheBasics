@@ -33,6 +33,12 @@ permissions:
         description: use /vanish
       disguise:
         description:  use /disguise
+      timer:
+        children:
+            start:
+              descrption: use /timer start
+            stop:
+              descrption: use /timer stop
 
 commands:
   tp:
@@ -53,4 +59,6 @@ commands:
     permission: administration.fakeop
     usage: /fakeop <player>
     description: give a player fake OP
-
+  timer:
+    usage: /timer <start/stop>
+    description: starts or stops a personal timer for a player

@@ -20,10 +20,11 @@ ATB contains everything necessary for your Minecraft Server!
     - /tp
     - /freeze
     - /fakeop
+    - /timer
 #### 3. Fully Customizable Config
-    - prefix
-    - language
-    - activate / deactivate Features 
+    - change prefix
+    - choose the way /freeze effects players
+    - set language
 
     
 ## Authors
