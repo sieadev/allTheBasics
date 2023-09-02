@@ -18,7 +18,7 @@ public final class AllTheBasics extends JavaPlugin {
 
         try {
             sendConsoleMessage("Attempting to start ATB...");
-
+            
             sendConsoleMessage("Successfully loaded the Config");
         } catch (Exception e) {
             // Handle the exception here
