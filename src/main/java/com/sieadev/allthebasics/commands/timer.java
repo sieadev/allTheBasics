@@ -1,9 +1,11 @@
+package com.sieadev.allthebasics.commands;
+
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.Plugin;
 
 public class timer implements CommandExecutor {
 
@@ -16,7 +18,11 @@ public class timer implements CommandExecutor {
 /*
 Implements the /timer start/stop command
 */
-    
+    private final Plugin plugin;
+
+    public timer(Plugin plugin) {
+        this.plugin = plugin;
+    }
 @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("timer")) {
@@ -29,7 +35,7 @@ Implements the /timer start/stop command
                             startTime = System.currentTimeMillis();
                             timerRunning = true;
                             sender.sendMessage("§cTimer started.");
-                            taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> updateActionBar(player), 0L, 20L);
+                            taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, () -> updateActionBar(player), 0L, 20L);
                         } else {
                             sender.sendMessage("§cTimer is already running.");
                         }
@@ -46,7 +52,7 @@ Implements the /timer start/stop command
                                 Bukkit.getScheduler().cancelTask(taskId);
                                 taskId = -1;
                             }
-                            player.sendActionBar("");
+                            player.sendTitle("", "");
                         } else {
                             sender.sendMessage("§cTimer is not running.");
                         }
@@ -68,7 +74,7 @@ Implements the /timer start/stop command
         if (timerRunning) {
             long currentTime = System.currentTimeMillis();
             long elapsedTime = (currentTime - startTime) / 1000;
-            player.sendActionBar("§cTimer: " + elapsedTime + " §cseconds");
+            player.sendTitle("" , "§cTimer: " + elapsedTime + " §cseconds");
         }
     }
 }
