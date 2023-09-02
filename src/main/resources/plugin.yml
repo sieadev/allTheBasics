@@ -33,6 +33,12 @@ permissions:
         description: use /vanish
       disguise:
         description:  use /disguise
+      timer:
+        children:
+            start:
+              descrption: use /timer start
+            stop:
+              descrption: use /timer stop
 
 commands:
   tp:
