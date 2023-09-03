@@ -73,7 +73,7 @@ Implements the /timer start/stop command
     private void updateActionBar(Player player) {
         if (timerRunning) {
             long currentTime = System.currentTimeMillis();
-            long elapsedTime = (currentTime - startTime) / 1000;
+            elapsedTime = (currentTime - startTime) / 1000;
             player.sendTitle("" , "§cTimer: " + elapsedTime + " §cseconds");
         }
     }
