@@ -21,7 +21,7 @@ permissions:
         children:
           color:
             description: use colorful text in chat
-          highlight:
+          highlightNumbers:
             description: auto-highlight numbers
           math:
             description: auto-calculate math
@@ -51,24 +51,63 @@ permissions:
               descrption: use /timer stop
 
 commands:
-  tp:
-    permission: administration.tp
-    usage: /tp <player>
-    description: Teleport to a player
   heal:
-    permission: administration.heal
+    permission: atb.heal
     usage: /heal <player>
-    description: heal a player
+    description: Heal a player
     alias: h
   feed:
-    permission: administration.feed
+    permission: atb.feed
     usage: /heal <player>
-    description: feed a player
+    description: Feed a player
     alias: f
   fakeop:
-    permission: administration.fakeop
+    permission: atb.fakeop
     usage: /fakeop <player>
-    description: give a player fake OP
+    description: Give a player fake OP
   timer:
+    permission: atb.timer
     usage: /timer <start/stop>
-    description: starts or stops a personal timer for a player
+    description: Starts or stops a personal timer for a player
+  freeze:
+    permission: atb.freeze
+    usage: /freeze <target>
+    description: Freeze a player
+  fly:
+    permission: atb.fly
+    usage: /fly
+    description: Enables flying
+  disguise:
+    permission: atb.disguise
+    usage: /disguise
+    description: Disguise as a player
+  vanish:
+    permission: atb.vanish
+    usage: /vanish
+    description: Become invisible
+  tp:
+    permission: atb.teleport
+    usage: /teleport <player>
+    description: Teleport to a player // Teleport a player to a player
+    alias: teleport
+  gm:
+    permissions: [atb.gamemode.creative, atb.gamemode.survival, atb.gamemode.adventure, atb.gamemode.spectator]
+    usage: gm <gamemode>
+    description: Change your Gamemmode
+    alias: gamemode
+  gm0:
+    permission: atb.gamemode.survival
+    usage: /gm1
+    description: Change your Gamemode to survival
+  gm1:
+    permission: atb.gamemode.creative
+    usage: /gm1
+    description: Change your Gamemode to creative
+  gm2:
+    permission: atb.gamemode.adventure
+    usage: /gm1
+    description: Change your Gamemode to adventure
+  gm3:
+    permission: atb.gamemode.spectator
+    usage: /gm1
+    description: Change your Gamemode to spectator

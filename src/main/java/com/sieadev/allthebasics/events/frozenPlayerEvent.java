@@ -24,12 +24,11 @@ public class frozenPlayerEvent implements Listener {
 
     public static void toggleFreeze(Player target, Player user) {
         if (frozenPlayers.containsKey(target)) {
-            boolean isFrozen = frozenPlayers.get(target);
-            frozenPlayers.put(target, !isFrozen);
+            frozenPlayers.remove(target);
             if (!target.getName().equalsIgnoreCase(user.getName())){
-                user.sendMessage("&eYou unfroze " + target.getDisplayName());
+                user.sendMessage("§eYou unfroze " + target.getDisplayName());
             }
-            target.sendMessage("&eYou haven been unfrozen. You may now move!");
+            target.sendMessage("§eYou haven been unfrozen. You may now move!");
         } else {
             frozenPlayers.put(target, true);
             if (target.getName().equalsIgnoreCase(user.getName())){

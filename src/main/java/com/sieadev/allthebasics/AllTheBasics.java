@@ -43,10 +43,9 @@ public final class AllTheBasics extends JavaPlugin {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;
         }
-
         try {
             getServer().getPluginManager().registerEvents(new frozenPlayerEvent(), this);
-            getServer().getPluginManager().registerEvents(new PlayerChatEvent(), this);
+            getServer().getPluginManager().registerEvents(new PlayerChatEvent(true, true ,true ,true, true), this);
             getServer().getPluginManager().registerEvents(new playerJoinEvent(), this);
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Events and/or Listeners: " + e.getMessage());

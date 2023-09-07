@@ -21,11 +21,13 @@
 prefix: "§b[ATB]"
 
 # Chat Settings
-alternateColorCodes: true
-calculateMathEquations: true
-highlightCoordinates: true
-highlightNumbers: true
 highlightPlayerName: true
+# /If these are enabled anyone will be able to use them. If disabled only players with certain permissions/
+colorCodes: false
+emojiCodes: true # :cry: -> （>﹏<）
+calculateMathEquations: true
+highlightNumbers: true
+
 
 # Language settings
 # /This is currently not supported/
@@ -38,7 +40,7 @@ freezeInteraction: true
 freezeChat: false
 freezeInventoryOpen: true
 freezeInventoryClick: true
-freezeCombat: false #This will deactivate all kinds of combat this player is part of // incoming and outgoing
+freezeCombat: false
 freezeOutgoingCombat: true
 
 

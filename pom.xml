@@ -6,7 +6,7 @@
 
     <groupId>com.sieadev</groupId>
     <artifactId>allTheBasics</artifactId>
-    <version>1.0</version>
+    <version>1.4.9</version>
     <packaging>jar</packaging>
 
     <name>allTheBasics</name>

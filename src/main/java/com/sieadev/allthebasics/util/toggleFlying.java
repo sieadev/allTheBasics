@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 public class toggleFlying {
     public static void toggleFlying(Player p, String t){
-        if (p.hasPermission("atb.fly")){
+        if (!p.hasPermission("atb.fly")){
             p.sendMessage("§cYou don't have the required permissions to use this command.");
             return;
         }

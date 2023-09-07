@@ -26,7 +26,7 @@ public class tpPlayer {
             return;
         }
 
-        target2.teleport(target);
-        p.sendMessage(ChatColor.YELLOW + "You teleported §r" + target2.getDisplayName() + ChatColor.YELLOW +" to §r" + target.getDisplayName());
+        target.teleport(target2);
+        p.sendMessage(ChatColor.YELLOW + "You teleported §r" + target.getDisplayName() + ChatColor.YELLOW +" to §r" + target2.getDisplayName());
     }
 }
