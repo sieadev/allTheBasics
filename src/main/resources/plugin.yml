@@ -17,6 +17,16 @@ permissions:
             description: use /gm survival
           adventure:
             description: use /gm adventure
+      chat:
+        children:
+          color:
+            description: use colorful text in chat
+          highlight:
+            description: auto-highlight numbers
+          math:
+            description: auto-calculate math
+          emoji:
+            description: auto-convert emojis
       fakeop:
         description: use /fakeop
       heal:

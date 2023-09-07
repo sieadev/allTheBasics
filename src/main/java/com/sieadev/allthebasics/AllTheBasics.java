@@ -16,13 +16,13 @@ public final class AllTheBasics extends JavaPlugin {
     public void onEnable() {
         this.errors = 0;
 
+        sendConsoleMessage("Attempting to start ATB...");
+
         try {
-            sendConsoleMessage("Attempting to start ATB...");
-            
-            sendConsoleMessage("Successfully loaded the Config");
+
         } catch (Exception e) {
             // Handle the exception here
-            System.err.println("An error occurred when loading the Config: " + e.getMessage());
+            sendConsoleMessage("An error occurred when loading the Config: " + e.getMessage());
             this.errors = errors + 1;
         }
 
@@ -40,7 +40,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("gm3").setExecutor(new gm3());
             getCommand("gm").setExecutor(new gm());
         } catch (Exception e) {
-            System.err.println("An error occurred when loading in Commands: " + e.getMessage());
+            sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;
         }
 
@@ -49,7 +49,7 @@ public final class AllTheBasics extends JavaPlugin {
             getServer().getPluginManager().registerEvents(new PlayerChatEvent(), this);
             getServer().getPluginManager().registerEvents(new playerJoinEvent(), this);
         } catch (Exception e) {
-            System.err.println("An error occurred when loading in Events and/or Listeners: " + e.getMessage());
+            sendConsoleMessage("An error occurred when loading in Events and/or Listeners: " + e.getMessage());
             this.errors = errors + 1;
         }
 
