@@ -6,8 +6,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
+import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 public class PlayerChatEvent implements Listener {
 
@@ -50,7 +52,30 @@ public class PlayerChatEvent implements Listener {
     }
 
     public static String calculateMathInString(String input) {
-        //Math here
-        return input;
+        Matcher m = Pattern.compile ("\\d+(\\s*[+\\-*/]\\s*\\d+)+").matcher(input);
+        return m.replaceAll(mr -> {
+            String match = mr.group();
+            Matcher digit = Pattern.compile("\\d+").matcher(match);
+            Matcher operators = Pattern.compile("[+\\-*/]").matcher(match);
+            if (!digit.find()) return "";
+            float result = Float.parseFloat(digit.group());
+            while (digit.find() && operators.find()) {
+                switch (operators.group()) {
+                    case "+":
+                        result += Float.parseFloat(digit.group());
+                        break;
+                    case "-":
+                        result -= Float.parseFloat(digit.group());
+                        break;
+                    case "*":
+                        result *= Float.parseFloat(digit.group());
+                        break;
+                    case "/":
+                        result /= Float.parseFloat(digit.group());
+                        break;
+                }
+            }
+            return Float.toString(result);
+        });
     }
 }
