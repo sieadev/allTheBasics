@@ -8,6 +8,7 @@ ATB contains everything necessary for your Minecraft Server!
 
 #### 1. Chat:
     - Colorful Chat messages
+    - Auto highlight numbers and other parameters
 #### 2. Commands:
     - /feed
     - /heal
@@ -25,9 +26,9 @@ ATB contains everything necessary for your Minecraft Server!
 
 ### Future updates may include
     - Auto Calculate simple Math (e.g. "20+14-7" will display as "27")
-    - Auto highlight numbers and other parameters
     - Convert Emoji's
     - set language
+    - Auto highlight playernames
 
 ## Authors
 
