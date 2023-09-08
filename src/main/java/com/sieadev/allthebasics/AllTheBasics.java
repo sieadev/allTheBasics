@@ -3,6 +3,7 @@ package com.sieadev.allthebasics;
 import com.sieadev.allthebasics.commands.*;
 import com.sieadev.allthebasics.commands.gamemode.*;
 import com.sieadev.allthebasics.commands.home.*;
+import com.sieadev.allthebasics.util.homeUtility;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.sieadev.allthebasics.events.*;
@@ -43,13 +44,14 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("burn").setExecutor(new burn());
             getCommand("suicide").setExecutor(new suicide());
             getCommand("kickall").setExecutor(new kickall());
-            getCommand("home").setExecutor(new home());
-            getCommand("findhome").setExecutor(new findhome());
-            getCommand("sethome").setExecutor(new sethome());
+            getCommand("home").setExecutor(new home(this));
+            getCommand("findhome").setExecutor(new findhome(this));
+            getCommand("sethome").setExecutor(new sethome(this));
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;
         }
+
         try {
             getServer().getPluginManager().registerEvents(new frozenPlayerEvent(), this);
             getServer().getPluginManager().registerEvents(new PlayerChatEvent(true, true ,true ,true, true), this);
