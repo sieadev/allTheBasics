@@ -36,7 +36,7 @@ public class tpPlayer {
             p.sendMessage("§cYou don't have the required permissions to use this command.");
             return;
         }
-        int playercound = 0;
+        int playercound = -1;
 
         for(Player p2 : Bukkit.getServer().getOnlinePlayers()){
             p2.teleport(p);
