@@ -23,7 +23,7 @@ public class burnPlayer {
         }
 
         target.setFireTicks(100);
-        p.sendMessage(ChatColor.YELLOW + "You lit " + target.getDisplayName() + ChatColor.YELLOW + " on fire");
+        p.sendMessage(ChatColor.YELLOW + "You lit §r" + target.getDisplayName() + ChatColor.YELLOW + " on fire");
         target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " lit you on fire.");
     }
 
