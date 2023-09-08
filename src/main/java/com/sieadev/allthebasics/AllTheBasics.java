@@ -2,6 +2,7 @@ package com.sieadev.allthebasics;
 
 import com.sieadev.allthebasics.commands.*;
 import com.sieadev.allthebasics.commands.gamemode.*;
+import com.sieadev.allthebasics.commands.home.*;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.sieadev.allthebasics.events.*;
@@ -42,6 +43,9 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("burn").setExecutor(new burn());
             getCommand("suicide").setExecutor(new suicide());
             getCommand("kickall").setExecutor(new kickall());
+            getCommand("home").setExecutor(new home());
+            getCommand("findhome").setExecutor(new findhome());
+            getCommand("sethome").setExecutor(new sethome());
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;

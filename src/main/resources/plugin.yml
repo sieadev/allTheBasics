@@ -57,6 +57,14 @@ permissions:
         description: use /kickall
       kickplayer:
         description: use /kickplayer
+      home:
+        children:
+          set:
+            descrption: use /sethome
+          find:
+            description: use /findhome
+          teleport:
+            description: use /home
 
 commands:
   heal:
@@ -131,3 +139,15 @@ commands:
     permission: atb.kickall
     usage: /kickall
     description: Kick all Players
+  home:
+    permissions: [atb.home.teleport, atb.home.find]
+    usage: /home
+    description: Teleport home
+  findhome:
+    permission: atb.home.find
+    usage: /findhome
+    description: Find your home
+  sethome:
+    permission: atb.home.set
+    usage: /sethome
+    description: Set your home
