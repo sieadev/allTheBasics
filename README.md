@@ -21,6 +21,7 @@ ATB contains everything necessary for your Minecraft Server!
     - /freeze
     - /fakeop
     - /timer
+    - /burn
 #### 3. Fully Customizable Config
     - change prefix
     - choose the way /freeze effects players
@@ -29,7 +30,6 @@ ATB contains everything necessary for your Minecraft Server!
     - Convert Emoji's
     - set language
     - Auto highlight playernames
-	- Burn Command
 	- Setitemname
 	- Setplayername
 	- Autocheck for new Version on this Repository
