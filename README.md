@@ -22,6 +22,7 @@ ATB contains everything necessary for your Minecraft Server!
     - /fakeop
     - /timer
     - /burn
+    - /suicide
 #### 3. Fully Customizable Config
     - change prefix
     - choose the way /freeze effects players
@@ -35,7 +36,6 @@ ATB contains everything necessary for your Minecraft Server!
 	- Autocheck for new Version on this Repository
 	- Temp ban command
 	- /home /sethome
-	- /suicide
 	- /kickall
 	- /tpall
 ## Authors
