@@ -62,11 +62,13 @@ permissions:
       home:
         children:
           set:
-            descrption: use /sethome
+            description: use /sethome
           find:
             description: use /findhome
           teleport:
             description: use /home
+      playtime:
+        description: use /playtime
 
 commands:
   heal:
@@ -161,3 +163,7 @@ commands:
     permission: atb.home.set
     usage: §c/sethome
     description: Set your home
+  playtime:
+    permission: atb.playtime
+    usage: §c/playtime
+    description: Get your Playtime
