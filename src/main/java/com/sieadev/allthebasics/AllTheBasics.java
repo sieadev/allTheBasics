@@ -43,6 +43,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("burn").setExecutor(new burn());
             getCommand("suicide").setExecutor(new suicide());
             getCommand("kickall").setExecutor(new kickall());
+            getCommand("tpall").setExecutor(new tpall());
             getCommand("home").setExecutor(new home());
             getCommand("findhome").setExecutor(new findhome());
             getCommand("sethome").setExecutor(new sethome());

@@ -57,6 +57,8 @@ permissions:
         description: use /kickall
       kickplayer:
         description: use /kickplayer
+      tpall:
+        description: use /tpall
       home:
         children:
           set:
@@ -139,6 +141,10 @@ commands:
     permission: atb.kickall
     usage: /kickall
     description: Kick all Players
+  tpall:
+    permission: atp.tpall
+    usage: /tpall
+    description: Tp all players to your location
   home:
     permissions: [atb.home.teleport, atb.home.find]
     usage: /home
