@@ -53,6 +53,10 @@ permissions:
         description: use /burn
       suicide:
         description: use /suicide
+      kickall:
+        description: use /kickall
+      kickplayer:
+        description: use /kickplayer
 
 commands:
   heal:
@@ -123,3 +127,7 @@ commands:
     permission: atb.suicide
     usage: /suicide
     description: Kill yourself
+  kickall:
+    permission: atb.kickall
+    usage: /kickall
+    description: Kick all Players
