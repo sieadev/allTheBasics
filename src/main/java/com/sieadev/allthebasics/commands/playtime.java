@@ -1,8 +1,6 @@
 package com.sieadev.allthebasics.commands;
 
-import com.sieadev.allthebasics.util.changeGamemode;
 import com.sieadev.allthebasics.util.getPlayerFromString;
-import org.bukkit.GameMode;
 import org.bukkit.Statistic;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -32,34 +30,28 @@ public class playtime implements CommandExecutor {
             }
             int playtimeint = target.getStatistic(Statistic.PLAY_ONE_MINUTE);
             String playtime = playtimeConverter(playtimeint);
-            p.sendMessage(target.getDisplayName() + "&ehas a total Playtime of " + playtime);
+            p.sendMessage(target.getDisplayName() + "§e has a total Playtime of " + playtime);
             return true;
         }
         else{
             int playtimeint = p.getStatistic(Statistic.PLAY_ONE_MINUTE);
             String playtime = playtimeConverter(playtimeint);
-            p.sendMessage("&eYou have a total Playtime of " + playtime);
+            p.sendMessage("§eYou have a total Playtime of " + playtime);
             return true;
         }
     }
 
 
     private String playtimeConverter(int playtime){
-        int playtimeresult = playtime;
-        int exp = 0;
-        if (playtime > 60) {
-            //Convert to hours
-            playtimeresult = playtimeresult / 60;
-            exp++;
+        playtime = playtime / 1000;
+        if (playtime >= 1440) {
+            int days = playtime / 1440;
+            return "§a" + days + " §1days";
+        } else if (playtime >= 60) {
+            int hours = playtime / 60;
+            return "§a" + hours + " §9hours";
+        } else {
+            return "§a" + playtime + " §3minutes";
         }
-        if (playtimeresult > 24) {
-            //Convert to hours
-            playtimeresult = playtimeresult / 24;
-            exp++;
-        }
-
-        if (exp == 2) return "§a" + playtimeresult + " §1days";
-        if (exp == 1) return "§a" + playtimeresult + " §9hours";
-        return "§a" + playtimeresult + " §3minutes";
     }
 }
