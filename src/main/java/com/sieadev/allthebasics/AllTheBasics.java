@@ -42,6 +42,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("burn").setExecutor(new burn());
             getCommand("suicide").setExecutor(new suicide());
             getCommand("kickall").setExecutor(new kickall());
+            getCommand("tpall").setExecutor(new tpall());
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;
