@@ -146,7 +146,7 @@ commands:
     usage: /kickall
     description: Kick all Players
   tpall:
-    permission: atp.tpall
+    permission: atb.tpall
     usage: /tpall
     description: Tp all players to your location
   home:
