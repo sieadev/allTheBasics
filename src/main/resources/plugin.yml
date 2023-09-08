@@ -51,6 +51,8 @@ permissions:
               descrption: use /timer stop
       burn:
         description: use /burn
+      suicide:
+        description: use /suicide
 
 commands:
   heal:
@@ -117,3 +119,7 @@ commands:
     permission: atb.burn
     usage: /burn <player>
     description: Light a Player on fire
+  suicide:
+    permission: atb.suicide
+    usage: /suicide
+    description: Kill yourself
