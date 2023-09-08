@@ -12,10 +12,9 @@ public class gm2 implements CommandExecutor {
   
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Player player = (Player) sender;
-
         if (!(sender instanceof Player)){
             sender.sendMessage("§cYou can not use this command in the Console.");
+            return true;
         }
         Player p = (Player) sender;
         if (args.length > 0){

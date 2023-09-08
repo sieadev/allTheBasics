@@ -59,6 +59,14 @@ permissions:
         description: use /kickplayer
       tpall:
         description: use /tpall
+      home:
+        children:
+          set:
+            descrption: use /sethome
+          find:
+            description: use /findhome
+          teleport:
+            description: use /home
 
 commands:
   heal:
@@ -137,3 +145,15 @@ commands:
     permission: atp.tpall
     usage: /tpall
     description: Tp all players to your location
+  home:
+    permissions: [atb.home.teleport, atb.home.find]
+    usage: /home
+    description: Teleport home
+  findhome:
+    permission: atb.home.find
+    usage: /findhome
+    description: Find your home
+  sethome:
+    permission: atb.home.set
+    usage: /sethome
+    description: Set your home
