@@ -3,7 +3,6 @@ package com.sieadev.allthebasics;
 import com.sieadev.allthebasics.commands.*;
 import com.sieadev.allthebasics.commands.gamemode.*;
 import com.sieadev.allthebasics.commands.home.*;
-import com.sieadev.allthebasics.util.homeUtility;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.sieadev.allthebasics.events.*;
@@ -44,6 +43,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("burn").setExecutor(new burn());
             getCommand("suicide").setExecutor(new suicide());
             getCommand("kickall").setExecutor(new kickall());
+            getCommand("tpall").setExecutor(new tpall());
             getCommand("home").setExecutor(new home(this));
             getCommand("findhome").setExecutor(new findhome(this));
             getCommand("sethome").setExecutor(new sethome(this));

@@ -1,5 +1,6 @@
 package com.sieadev.allthebasics.util;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
@@ -29,4 +30,20 @@ public class tpPlayer {
         target.teleport(target2);
         p.sendMessage(ChatColor.YELLOW + "You teleported §r" + target.getDisplayName() + ChatColor.YELLOW +" to §r" + target2.getDisplayName());
     }
+
+    public static void tpAllPlayers(Player p) {
+        if (!p.hasPermission("atb.teleportall")) {
+            p.sendMessage("§cYou don't have the required permissions to use this command.");
+            return;
+        }
+        int playercound = 0;
+
+        for(Player p2 : Bukkit.getServer().getOnlinePlayers()){
+            p2.teleport(p);
+            p2.sendMessage("§eYou have been teleported to §r" + p.getDisplayName());
+            playercound++;
+        }
+        p.sendMessage("§eYou teleported §r" +playercound + " §eplayers to your location!§r");
+    }
 }
+
