@@ -17,6 +17,7 @@ public class healPlayer {
                 return;
             }
             p.sendMessage(ChatColor.YELLOW + "You healed yourself for §c" + Math.round(missingHealth) + "§c❤");
+            p.setHealth(p.getMaxHealth());
             return;
         }
 

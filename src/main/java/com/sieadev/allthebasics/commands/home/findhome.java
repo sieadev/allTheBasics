@@ -21,6 +21,6 @@ public class findhome implements CommandExecutor {
         }
         Player p = (Player)sender;
         homeUtility.findHome(p, plugin);
-        return false;
+        return true;
     }
 }

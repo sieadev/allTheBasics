@@ -21,6 +21,6 @@ public class home implements CommandExecutor {
         }
         Player p = (Player)sender;
         homeUtility.teleportHome(p, plugin);
-        return false;
+        return true;
     }
 }

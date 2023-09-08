@@ -21,6 +21,6 @@ public class sethome implements CommandExecutor {
         }
         Player p = (Player)sender;
         homeUtility.setHome(p, p.getLocation(), plugin);
-        return false;
+        return true;
     }
 }

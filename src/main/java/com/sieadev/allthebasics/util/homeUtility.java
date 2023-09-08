@@ -31,7 +31,7 @@ public class homeUtility {
         Location location = getHome(p, plugin);
         if (p.hasPermission("atb.home.teleport")){
             if (location == null){
-                p.sendMessage("§cYou don't have a home location set! &e/sethome");
+                p.sendMessage("§cYou don't have a home location set! §e/sethome");
                 return;
             }
             p.teleport(location);
@@ -46,11 +46,11 @@ public class homeUtility {
         Location location = getHome(p, plugin);
         if (p.hasPermission("atb.home.find")){
             if (location == null){
-                p.sendMessage("§cYou don't have a home location set! &e/sethome");
+                p.sendMessage("§cYou don't have a home location set! §e/sethome");
                 return;
             }
-            String coordiantes = "" + location.getX() + location.getY() + location.getZ();
-            p.sendMessage("&eYour home is at §1" + coordiantes);
+            String coordiantes = "§9x§e" + location.getX() + "§9y§e" + location.getY() + "§9z§e" + location.getZ();
+            p.sendMessage("§eYour home is at " + coordiantes);
         }
         else{
             p.sendMessage("§cYou don't have the required permissions to use this command.");
