@@ -34,8 +34,10 @@ ATB contains everything necessary for your Minecraft Server!
 	- Setplayername
 	- Autocheck for new Version on this Repository
 	- Temp ban command
-	- 
-
+	- /home /sethome
+	- /suicide
+	- /kickall
+	- /tpall
 ## Authors
 
 - [@sieadev](https://www.github.com/sieadev)
