@@ -11,7 +11,7 @@ public class burnPlayer {
         }
 
         if (t == null){
-            p.setFireTicks(40);
+            p.setFireTicks(100);
             p.sendMessage(ChatColor.YELLOW + "You lit yourself on fire.");
             return;
         }
@@ -22,7 +22,7 @@ public class burnPlayer {
             return;
         }
 
-        target.setFireTicks(40);
+        target.setFireTicks(100);
         p.sendMessage(ChatColor.YELLOW + "You lit " + target.getDisplayName() + ChatColor.YELLOW + " on fire");
         target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " lit you on fire.");
     }
