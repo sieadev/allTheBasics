@@ -73,12 +73,12 @@ commands:
     permission: atb.heal
     usage: /heal <player>
     description: Heal a player
-    alias: h
+    aliases: h
   feed:
     permission: atb.feed
     usage: /heal <player>
     description: Feed a player
-    alias: f
+    aliases: f
   fakeop:
     permission: atb.fakeop
     usage: /fakeop <player>
@@ -107,28 +107,32 @@ commands:
     permission: atb.teleport
     usage: /teleport <player>
     description: Teleport to a player // Teleport a player to a player
-    alias: teleport
+    aliases: teleport
   gm:
     permissions: [atb.gamemode.creative, atb.gamemode.survival, atb.gamemode.adventure, atb.gamemode.spectator]
     usage: gm <gamemode>
     description: Change your Gamemmode
-    alias: gamemode
+    aliases: gamemode
   gm0:
     permission: atb.gamemode.survival
     usage: /gm1
     description: Change your Gamemode to survival
+    aliases: survival
   gm1:
     permission: atb.gamemode.creative
     usage: /gm1
     description: Change your Gamemode to creative
+    aliases: creative
   gm2:
     permission: atb.gamemode.adventure
     usage: /gm1
     description: Change your Gamemode to adventure
+    aliases: adventure
   gm3:
     permission: atb.gamemode.spectator
     usage: /gm1
     description: Change your Gamemode to spectator
+    aliases: spectator
   burn:
     permission: atb.burn
     usage: /burn <player>
