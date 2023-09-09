@@ -25,6 +25,7 @@ ATB contains everything necessary for your Minecraft Server!
     - /suicide
     - /kickall
     - /tpall
+    - /setitemname
  
 #### 3. Fully Customizable Config
     - change prefix
@@ -34,7 +35,6 @@ ATB contains everything necessary for your Minecraft Server!
     - Convert Emoji's
     - set language
     - Auto highlight playernames
-	- Setitemname
 	- Setplayername
 	- Autocheck for new Version on this Repository
 	- Temp ban command
