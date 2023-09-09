@@ -30,11 +30,11 @@ public class toggleFlying {
         if (!target.getAllowFlight()){
             target.setAllowFlight(true);
             p.sendMessage(ChatColor.YELLOW + "You enabled flying for §r" + target.getDisplayName());
-            target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " enabled flying for you you.");
+            target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " enabled flying for you.");
             return;
         }
         target.setAllowFlight(false);
         p.sendMessage(ChatColor.YELLOW + "You disabled flying for §r" + target.getDisplayName());
-        target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " disabled flying for you you.");
+        target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " disabled flying for you.");
     }
 }
