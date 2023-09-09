@@ -62,108 +62,109 @@ permissions:
       home:
         children:
           set:
-            description: use /sethome
+            descrption: use /sethome
           find:
             description: use /findhome
           teleport:
             description: use /home
-      playtime:
-        description: use /playtime
+      setitemname:
+        description: use /setitemname
+
 
 commands:
   heal:
     permission: atb.heal
-    usage: §c/heal <player>
+    usage: /heal <player>
     description: Heal a player
     aliases: h
   feed:
     permission: atb.feed
-    usage: §c/feed <player>
+    usage: /heal <player>
     description: Feed a player
     aliases: f
   fakeop:
     permission: atb.fakeop
-    usage: §c/fakeop <player>
+    usage: /fakeop <player>
     description: Give a player fake OP
   timer:
     permission: atb.timer
-    usage: §c/timer <start/stop>
+    usage: /timer <start/stop>
     description: Starts or stops a personal timer for a player
   freeze:
     permission: atb.freeze
-    usage: §c/freeze <target>
+    usage: /freeze <target>
     description: Freeze a player
   fly:
     permission: atb.fly
-    usage: §c/fly
+    usage: /fly
     description: Enables flying
   disguise:
     permission: atb.disguise
-    usage: §c/disguise
+    usage: /disguise
     description: Disguise as a player
   vanish:
     permission: atb.vanish
-    usage: §c/vanish
+    usage: /vanish
     description: Become invisible
   tp:
     permission: atb.teleport
-    usage: §c/teleport <player>
+    usage: /teleport <player>
     description: Teleport to a player // Teleport a player to a player
     aliases: teleport
   gm:
     permissions: [atb.gamemode.creative, atb.gamemode.survival, atb.gamemode.adventure, atb.gamemode.spectator]
-    usage: §c/gm <gamemode>
+    usage: gm <gamemode>
     description: Change your Gamemmode
     aliases: gamemode
   gm0:
     permission: atb.gamemode.survival
-    usage: §c/gm1
+    usage: /gm1
     description: Change your Gamemode to survival
     aliases: survival
   gm1:
     permission: atb.gamemode.creative
-    usage: §c/gm1
+    usage: /gm1
     description: Change your Gamemode to creative
     aliases: creative
   gm2:
     permission: atb.gamemode.adventure
-    usage: §c/gm1
+    usage: /gm1
     description: Change your Gamemode to adventure
     aliases: adventure
   gm3:
     permission: atb.gamemode.spectator
-    usage: §c/gm1
+    usage: /gm1
     description: Change your Gamemode to spectator
     aliases: spectator
   burn:
     permission: atb.burn
-    usage: §c/burn <player>
+    usage: /burn <player>
     description: Light a Player on fire
   suicide:
     permission: atb.suicide
-    usage: §c/suicide
+    usage: /suicide
     description: Kill yourself
   kickall:
     permission: atb.kickall
-    usage: §c/kickall
+    usage: /kickall
     description: Kick all Players
   tpall:
     permission: atb.tpall
-    usage: §c/tpall
+    usage: /tpall
     description: Tp all players to your location
   home:
     permissions: [atb.home.teleport, atb.home.find]
-    usage: §c/home
+    usage: /home
     description: Teleport home
   findhome:
     permission: atb.home.find
-    usage: §c/findhome
+    usage: /findhome
     description: Find your home
   sethome:
     permission: atb.home.set
-    usage: §c/sethome
+    usage: /sethome
     description: Set your home
-  playtime:
-    permission: atb.playtime
-    usage: §c/playtime
-    description: Get your Playtime
+  setitemname:
+    permission: atb.setitemname
+    usage: /setitemname
+    description: Set a new Item name
