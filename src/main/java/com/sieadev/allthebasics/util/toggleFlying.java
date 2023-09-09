@@ -11,7 +11,7 @@ public class toggleFlying {
         }
 
         if (t == null){
-            if (!p.isFlying()){
+            if (!p.getAllowFlight()){
                 p.setFlying(true);
                 p.sendMessage(ChatColor.YELLOW + "You enabled flying for yourself.");
                 return;
@@ -27,7 +27,7 @@ public class toggleFlying {
             return;
         }
 
-        if (!target.isFlying()){
+        if (!target.getAllowFlight()){
             target.setFlying(true);
             p.sendMessage(ChatColor.YELLOW + "You enabled flying for §r" + target.getDisplayName());
             target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " enabled flying for you you.");
