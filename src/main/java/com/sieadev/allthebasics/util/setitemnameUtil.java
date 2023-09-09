@@ -17,6 +17,5 @@ public class setitemnameUtil {
         ItemMeta l = i.getItemMeta();
         l.setDisplayName(name);
         i.setItemMeta(l);
-
     }
 }
