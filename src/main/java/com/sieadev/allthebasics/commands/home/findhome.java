@@ -5,8 +5,14 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 
 public class findhome implements CommandExecutor {
+    private final Plugin plugin;
+
+    public findhome(Plugin plugin){
+        this.plugin = plugin;
+    }
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)){
@@ -14,7 +20,7 @@ public class findhome implements CommandExecutor {
             return true;
         }
         Player p = (Player)sender;
-        homeUtility.findHome(p);
-        return false;
+        homeUtility.findHome(p, plugin);
+        return true;
     }
 }

@@ -12,11 +12,8 @@ public class tpall implements CommandExecutor {
       { if (!(sender instanceof Player)){
         sender.sendMessage("§cYou can not use this command in the Console.");
       }
-
         Player p = (Player) sender;
-
-          tpPlayer.tpAllPlayers(p);
-
+        tpPlayer.tpAllPlayers(p);
         return true;
     }
 }

@@ -44,15 +44,15 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("suicide").setExecutor(new suicide());
             getCommand("kickall").setExecutor(new kickall());
             getCommand("tpall").setExecutor(new tpall());
-            getCommand("home").setExecutor(new home());
-            getCommand("findhome").setExecutor(new findhome());
-            getCommand("sethome").setExecutor(new sethome());
-            getCommand("setitemname").setExecutor((new setintemname()));
-
+            getCommand("home").setExecutor(new home(this));
+            getCommand("findhome").setExecutor(new findhome(this));
+            getCommand("sethome").setExecutor(new sethome(this));
+            getCommand("playtime").setExecutor(new playtime());
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;
         }
+
         try {
             getServer().getPluginManager().registerEvents(new frozenPlayerEvent(), this);
             getServer().getPluginManager().registerEvents(new PlayerChatEvent(true, true ,true ,true, true), this);
