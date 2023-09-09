@@ -16,9 +16,11 @@ public class setintemname implements CommandExecutor {
         Player p = (Player) sender;
         if (args.length<1) return false;
 
+
         String name = args[0];
 
         setitemnameUtil.setitemname(p, name);
+
 
         return true;
 

@@ -1,5 +1,6 @@
 package com.sieadev.allthebasics.util;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -13,8 +14,14 @@ public class setitemnameUtil {
             return;
         }
 
+
         ItemStack i = p.getInventory().getItemInMainHand();
         ItemMeta l = i.getItemMeta();
+        if (l == null){
+            p.sendMessage("§cYou need to be holding an Item");
+            return;}
+
+        name = ChatColor.translateAlternateColorCodes('&', name);
         l.setDisplayName(name);
         i.setItemMeta(l);
     }
