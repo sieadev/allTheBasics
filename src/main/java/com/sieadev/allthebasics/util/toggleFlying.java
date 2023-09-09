@@ -12,11 +12,11 @@ public class toggleFlying {
 
         if (t == null){
             if (!p.getAllowFlight()){
-                p.setFlying(true);
+                p.setAllowFlight(true);
                 p.sendMessage(ChatColor.YELLOW + "You enabled flying for yourself.");
                 return;
             }
-            p.setFlying(false);
+            p.setAllowFlight(false);
             p.sendMessage(ChatColor.YELLOW + "You disabled flying for yourself.");
             return;
         }
@@ -28,12 +28,12 @@ public class toggleFlying {
         }
 
         if (!target.getAllowFlight()){
-            target.setFlying(true);
+            target.setAllowFlight(true);
             p.sendMessage(ChatColor.YELLOW + "You enabled flying for §r" + target.getDisplayName());
             target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " enabled flying for you you.");
             return;
         }
-        target.setFlying(false);
+        target.setAllowFlight(false);
         p.sendMessage(ChatColor.YELLOW + "You disabled flying for §r" + target.getDisplayName());
         target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " disabled flying for you you.");
     }
