@@ -20,10 +20,17 @@ public class repairItem {
         if (l == null){
             p.sendMessage("§cYou need to be holding an Item");
             return;}
+        
+        Damageable damageable = (Damageable) item.getItemMeta();
+        int maxDurability = item.getType().getMaxDurability();
+        assert damageable != null;
+        int durability = maxDurability - damageable.getDamage() - 1;
+        if (!(durability < maxDurability)){
+            return;
+        }
 
 
-
-        i.setDurability((short) 100);
+        i.setDurability(maxDurability);
     }
 }
 
