@@ -67,6 +67,8 @@ permissions:
             description: use /findhome
           teleport:
             description: use /home
+      setitemname:
+        description: use /setitemname
 
 commands:
   heal:
@@ -161,3 +163,7 @@ commands:
     permission: atb.home.set
     usage: /sethome
     description: Set your home
+  setitemname:
+    permission: atb.setitemname
+    usage: /setitemname
+    description: Set a new Item name
