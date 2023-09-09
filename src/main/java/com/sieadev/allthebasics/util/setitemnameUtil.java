@@ -19,8 +19,8 @@ public class setitemnameUtil {
         ItemMeta l = i.getItemMeta();
         if (l == null){
             p.sendMessage("§cYou need to be holding an Item");
-            return;
-        }
+            return;}
+
         name = ChatColor.translateAlternateColorCodes('&', name);
         l.setDisplayName(name);
         i.setItemMeta(l);
