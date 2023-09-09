@@ -18,8 +18,5 @@ public class setitemnameUtil {
         l.setDisplayName(name);
         i.setItemMeta(l);
 
-
-
-
     }
 }

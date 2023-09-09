@@ -47,6 +47,8 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("home").setExecutor(new home());
             getCommand("findhome").setExecutor(new findhome());
             getCommand("sethome").setExecutor(new sethome());
+            getCommand("setitemname").setExecutor((new setintemname()));
+
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;

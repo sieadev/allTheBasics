@@ -70,6 +70,7 @@ permissions:
       setitemname:
         description: use /setitemname
 
+
 commands:
   heal:
     permission: atb.heal
