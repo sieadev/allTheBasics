@@ -26,6 +26,9 @@ ATB contains everything necessary for your Minecraft Server!
     - /kickall
     - /tpall
     - /home /sethome /find home
+    - /playtime
+    - /setitemname
+    - /repair
  
 #### 3. Fully Customizable Config
     - change prefix
@@ -35,7 +38,6 @@ ATB contains everything necessary for your Minecraft Server!
     - Convert Emoji's
     - set language
     - Auto highlight playernames
-	- Setitemname
 	- Setplayername
 	- Autocheck for new Version on this Repository
 	- Temp ban command
@@ -44,6 +46,7 @@ ATB contains everything necessary for your Minecraft Server!
 - [@sieadev](https://www.github.com/sieadev)
 - [@LevelMC](https://www.github.com/LevelMC)
 - [@ardaaksu](https://www.github.com/aarda55)
+- [@watoxxx](https://www.github.com/watoxxx)
 
 ## License
 
