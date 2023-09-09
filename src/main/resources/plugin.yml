@@ -69,6 +69,8 @@ permissions:
             description: use /home
       setitemname:
         description: use /setitemname
+      playtime:
+        description: use /playtime
 
 
 commands:
@@ -164,6 +166,10 @@ commands:
     permission: atb.home.set
     usage: /sethome
     description: Set your home
+  playtime:
+    permission: atb.playtime
+    usage: /playtime
+    description: Get your playtime
   setitemname:
     permission: atb.setitemname
     usage: /setitemname
