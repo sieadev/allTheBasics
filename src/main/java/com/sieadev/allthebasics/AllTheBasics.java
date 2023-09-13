@@ -3,6 +3,7 @@ package com.sieadev.allthebasics;
 import com.sieadev.allthebasics.commands.*;
 import com.sieadev.allthebasics.commands.gamemode.*;
 import com.sieadev.allthebasics.commands.home.*;
+import com.sieadev.allthebasics.util.chat.chatConverter;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.sieadev.allthebasics.events.*;
@@ -24,6 +25,13 @@ public final class AllTheBasics extends JavaPlugin {
         } catch (Exception e) {
             // Handle the exception here
             sendConsoleMessage("An error occurred when loading the Config: " + e.getMessage());
+            this.errors = errors + 1;
+        }
+
+        try {
+            chatConverter.loadConfig(true, true ,true ,true, true);
+        } catch (Exception e){
+            sendConsoleMessage("An error occurred while loading util classes: " + e.getMessage());
             this.errors = errors + 1;
         }
 
@@ -57,7 +65,7 @@ public final class AllTheBasics extends JavaPlugin {
 
         try {
             getServer().getPluginManager().registerEvents(new frozenPlayerEvent(), this);
-            getServer().getPluginManager().registerEvents(new PlayerChatEvent(true, true ,true ,true, true), this);
+            getServer().getPluginManager().registerEvents(new PlayerChatEvent(), this);
             getServer().getPluginManager().registerEvents(new playerJoinEvent(), this);
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Events and/or Listeners: " + e.getMessage());
