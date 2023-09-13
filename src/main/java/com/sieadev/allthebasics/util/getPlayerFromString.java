@@ -1,5 +1,6 @@
 package com.sieadev.allthebasics.util;
 
+import com.sieadev.allthebasics.util.text.messageBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
@@ -14,9 +15,9 @@ public class getPlayerFromString {
         } catch (NullPointerException e){
             OfflinePlayer offlinet = getOfflinePlayer(target);
             if (offlinet == null){
-                p.sendMessage(ChatColor.RED + "This Player does not exist.");
+                p.sendMessage(messageBuilder.playerIsNull);
             }
-            p.sendMessage(ChatColor.RED + "This Player is offline.");
+            p.sendMessage(messageBuilder.playerOffline);
             return null;
         }
 

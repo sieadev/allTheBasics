@@ -19,7 +19,7 @@ public class setitemnameUtil {
         ItemStack i = p.getInventory().getItemInMainHand();
         ItemMeta l = i.getItemMeta();
         if (l == null){
-            p.sendMessage("§cYou need to be holding an Item");
+            p.sendMessage(messageBuilder.needItemInHand);
             return;}
 
         name = ChatColor.translateAlternateColorCodes('&', name);
