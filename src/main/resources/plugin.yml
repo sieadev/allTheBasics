@@ -20,7 +20,7 @@ permissions:
       chat:
         children:
           color:
-            description: use colorful text in chat
+            description: use colorful text in text
           highlightNumbers:
             description: auto-highlight numbers
           math:
@@ -71,6 +71,9 @@ permissions:
         description: use /setitemname
       playtime:
         description: use /playtime
+      directmessage:
+        description: use /dm
+
 
 
 commands:
@@ -174,3 +177,8 @@ commands:
     permission: atb.setitemname
     usage: §c/setitemname <name>
     description: Set a new Item name
+  dm:
+    permission: atb.directmessage
+    usage: §c/dm <player> <message>
+    description: Send a direct message to a player
+    aliases: [directmessage, pm, msg]
