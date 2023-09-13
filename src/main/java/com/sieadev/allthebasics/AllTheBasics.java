@@ -3,11 +3,12 @@ package com.sieadev.allthebasics;
 import com.sieadev.allthebasics.commands.*;
 import com.sieadev.allthebasics.commands.gamemode.*;
 import com.sieadev.allthebasics.commands.home.*;
-import com.sieadev.allthebasics.util.chat.chatConverter;
+import com.sieadev.allthebasics.util.text.*;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.sieadev.allthebasics.events.*;
 import com.sieadev.allthebasics.listeners.*;
+import com.sieadev.allthebasics.commands.social.*;
 
 public final class AllTheBasics extends JavaPlugin {
 
@@ -29,7 +30,8 @@ public final class AllTheBasics extends JavaPlugin {
         }
 
         try {
-            chatConverter.loadConfig(true, true ,true ,true, true);
+            chatMessageBuilder.loadConfig(true, true ,true ,true, true);
+            messageBuilder.loadMessagesFromLanguageFile(this);
         } catch (Exception e){
             sendConsoleMessage("An error occurred while loading util classes: " + e.getMessage());
             this.errors = errors + 1;
@@ -57,7 +59,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("sethome").setExecutor(new sethome(this));
             getCommand("playtime").setExecutor(new playtime());
             getCommand("setitemname").setExecutor(new setintemname());
-
+            getCommand("dm").setExecutor(new dm());
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;

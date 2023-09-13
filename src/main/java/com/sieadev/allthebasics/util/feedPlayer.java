@@ -1,5 +1,6 @@
 package com.sieadev.allthebasics.util;
 
+import com.sieadev.allthebasics.util.text.messageBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -7,7 +8,7 @@ import org.bukkit.entity.Player;
 public class feedPlayer {
     public static void feedPlayer(Player p, String t){
         if (!p.hasPermission("atb.feed")){
-            p.sendMessage("§cYou don't have the required permissions to use this command.");
+            p.sendMessage(messageBuilder.noPermission);
             return;
         }
 
