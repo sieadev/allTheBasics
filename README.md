@@ -29,6 +29,8 @@ ATB contains everything necessary for your Minecraft Server!
     - /playtime
     - /setitemname
     - /repair
+    - /dm
+    - /block
  
 #### 3. Fully Customizable Config
     - change prefix
