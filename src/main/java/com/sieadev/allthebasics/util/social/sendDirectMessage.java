@@ -18,8 +18,8 @@ public class sendDirectMessage {
             return;
         }
         String message = chatMessageBuilder.all(p, m);
-        target.sendMessage(message);
-
+        target.sendMessage("§dFrom §7" + p.getDisplayName() + "§7 » " + message);
+        p.sendMessage("§dTo §7" + p.getDisplayName() + "§7 » " + message);
     }
 
 }

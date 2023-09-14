@@ -14,7 +14,7 @@ public class dm implements CommandExecutor {
             sender.sendMessage("§cYou can not use this command in the Console.");
             return true;
         }
-        if (args.length > 2) {
+        if (args.length < 2) {
             return false;
         }
         Player p = (Player)sender;
@@ -27,7 +27,7 @@ public class dm implements CommandExecutor {
             messageBuilder.append(args[i]).append(" ");
         }
         String message = messageBuilder.toString().trim();
-
+        p.sendMessage(message);
         sendDirectMessage.sendDirectMessage(p, args[0], message);
         return true;
     }

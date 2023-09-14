@@ -187,3 +187,7 @@ commands:
     usage: §c/dm <player> <message>
     description: Send a direct message to a player
     aliases: [directmessage, pm, msg]
+  repair:
+    permission: atb.repair
+    usage: §c/repair
+    description: Repair an item

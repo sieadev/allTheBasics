@@ -21,7 +21,8 @@ public class chatMessageBuilder {
         chatMessageBuilder.emoji = emoji;
         chatMessageBuilder.math = math;
     }
-    public static String all(Player p, String message){
+    public static String all(Player p, String m){
+        String message = m;
         if (p.hasPermission("atb.text.color") || colorCodes){
             message = ChatColor.translateAlternateColorCodes('&', message);
         }

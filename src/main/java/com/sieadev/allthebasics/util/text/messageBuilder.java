@@ -10,6 +10,9 @@ public class messageBuilder {
     public static String playerIsNull = ChatColor.RED + "This Player does not exist.";
     public static String needItemInHand = "§cYou need to be holding an Item";
     public static void loadMessagesFromLanguageFile(Plugin p){
-
+        noPermission = "§cYou don't have the required permissions to use this command.";
+        playerOffline = ChatColor.RED + "This Player is offline.";
+        playerIsNull = ChatColor.RED + "This Player does not exist.";
+        needItemInHand = "§cYou need to be holding an Item";
     }
 }

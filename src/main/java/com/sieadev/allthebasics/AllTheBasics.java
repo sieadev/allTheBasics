@@ -60,6 +60,8 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("playtime").setExecutor(new playtime());
             getCommand("setitemname").setExecutor(new setintemname());
             getCommand("dm").setExecutor(new dm());
+            getCommand("blind").setExecutor(new blind());
+            getCommand("repair").setExecutor(new repair());
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;
