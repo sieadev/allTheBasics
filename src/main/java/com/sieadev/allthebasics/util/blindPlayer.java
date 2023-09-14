@@ -14,8 +14,7 @@ public class blindPlayer {
         }
 
         if (t == null) {
-            p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Integer.MAX_VALUE, 0, false,
-                    false));
+            p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 1));
             p.sendMessage(ChatColor.YELLOW + "You blinded yourself.");
             return;
         }
