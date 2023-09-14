@@ -71,9 +71,10 @@ permissions:
         description: use /setitemname
       playtime:
         description: use /playtime
+      blind:
+        description: use /blind
       directmessage:
         description: use /dm
-
 
 
 commands:
@@ -177,6 +178,10 @@ commands:
     permission: atb.setitemname
     usage: §c/setitemname <name>
     description: Set a new Item name
+  blind:
+    permission: atb.blind
+    usage: §c/blind <player>
+    description: Blind someone
   dm:
     permission: atb.directmessage
     usage: §c/dm <player> <message>
