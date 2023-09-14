@@ -3,6 +3,7 @@ package com.sieadev.allthebasics;
 import com.sieadev.allthebasics.commands.*;
 import com.sieadev.allthebasics.commands.gamemode.*;
 import com.sieadev.allthebasics.commands.home.*;
+import com.sieadev.allthebasics.util.social.ignoreList;
 import com.sieadev.allthebasics.util.text.*;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -32,6 +33,7 @@ public final class AllTheBasics extends JavaPlugin {
         try {
             chatMessageBuilder.loadConfig(true, true ,true ,true, true);
             messageBuilder.loadMessagesFromLanguageFile(this);
+            ignoreList.ignoreListLoader(this);
         } catch (Exception e){
             sendConsoleMessage("An error occurred while loading util classes: " + e.getMessage());
             this.errors = errors + 1;
@@ -62,6 +64,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("dm").setExecutor(new dm());
             getCommand("blind").setExecutor(new blind());
             getCommand("repair").setExecutor(new repair());
+            getCommand("block").setExecutor(new block());
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;

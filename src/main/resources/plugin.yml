@@ -75,7 +75,8 @@ permissions:
         description: use /blind
       directmessage:
         description: use /dm
-
+      ignore:
+        description: use /ignore
 
 commands:
   heal:
@@ -187,6 +188,10 @@ commands:
     usage: §c/dm <player> <message>
     description: Send a direct message to a player
     aliases: [directmessage, pm, msg]
+  block:
+    permission: atb.ignore
+    usage: §c/block <player>
+    aliases: ignore
   repair:
     permission: atb.repair
     usage: §c/repair
