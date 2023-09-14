@@ -1,12 +1,13 @@
 package com.sieadev.allthebasics.util;
 
+import com.sieadev.allthebasics.util.text.messageBuilder;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class burnPlayer {
     public static void  burnPlayer(Player p, String t){
         if (!p.hasPermission("atb.burn")){
-            p.sendMessage("§cYou don't have the required permissions to use this command.");
+            p.sendMessage(messageBuilder.noPermission);
             return;
         }
 

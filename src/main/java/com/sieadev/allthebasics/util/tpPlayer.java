@@ -1,5 +1,6 @@
 package com.sieadev.allthebasics.util;
 
+import com.sieadev.allthebasics.util.text.messageBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -7,7 +8,7 @@ import org.bukkit.entity.Player;
 public class tpPlayer {
     public static void tpPlayer(Player p, String t, String t2){
         if (!p.hasPermission("atb.teleport")){
-            p.sendMessage("§cYou don't have the required permissions to use this command.");
+            p.sendMessage(messageBuilder.noPermission);
             return;
         }
 
@@ -33,7 +34,7 @@ public class tpPlayer {
 
     public static void tpAllPlayers(Player p) {
         if (!p.hasPermission("atb.teleportall")) {
-            p.sendMessage("§cYou don't have the required permissions to use this command.");
+            p.sendMessage(messageBuilder.noPermission);
             return;
         }
         int playercound = -1;

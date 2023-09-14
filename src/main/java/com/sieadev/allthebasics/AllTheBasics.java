@@ -3,10 +3,12 @@ package com.sieadev.allthebasics;
 import com.sieadev.allthebasics.commands.*;
 import com.sieadev.allthebasics.commands.gamemode.*;
 import com.sieadev.allthebasics.commands.home.*;
+import com.sieadev.allthebasics.util.text.*;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.sieadev.allthebasics.events.*;
 import com.sieadev.allthebasics.listeners.*;
+import com.sieadev.allthebasics.commands.social.*;
 
 public final class AllTheBasics extends JavaPlugin {
 
@@ -24,6 +26,14 @@ public final class AllTheBasics extends JavaPlugin {
         } catch (Exception e) {
             // Handle the exception here
             sendConsoleMessage("An error occurred when loading the Config: " + e.getMessage());
+            this.errors = errors + 1;
+        }
+
+        try {
+            chatMessageBuilder.loadConfig(true, true ,true ,true, true);
+            messageBuilder.loadMessagesFromLanguageFile(this);
+        } catch (Exception e){
+            sendConsoleMessage("An error occurred while loading util classes: " + e.getMessage());
             this.errors = errors + 1;
         }
 
@@ -49,7 +59,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("sethome").setExecutor(new sethome(this));
             getCommand("playtime").setExecutor(new playtime());
             getCommand("setitemname").setExecutor(new setintemname());
-
+            getCommand("dm").setExecutor(new dm());
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;
@@ -57,7 +67,7 @@ public final class AllTheBasics extends JavaPlugin {
 
         try {
             getServer().getPluginManager().registerEvents(new frozenPlayerEvent(), this);
-            getServer().getPluginManager().registerEvents(new PlayerChatEvent(true, true ,true ,true, true), this);
+            getServer().getPluginManager().registerEvents(new PlayerChatEvent(), this);
             getServer().getPluginManager().registerEvents(new playerJoinEvent(), this);
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Events and/or Listeners: " + e.getMessage());
