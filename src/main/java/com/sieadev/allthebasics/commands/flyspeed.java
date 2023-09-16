@@ -15,10 +15,10 @@ public class flyspeed implements CommandExecutor {
         Player p = (Player) sender;
         if (args.length > 0){
             String target = args[0];
-            flyspeedPlayer.flysppedPlayer(p, target);
+            flyspeedPlayer.flyspeedPlayer(p, target);
             return true;
         }
-        flyspeedPlayer.flysppedPlayer(p, null);
+        flyspeedPlayer.flyspeedPlayer(p, null);
         return true;
     }
 }

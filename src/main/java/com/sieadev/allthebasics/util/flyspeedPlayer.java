@@ -4,7 +4,7 @@ import com.sieadev.allthebasics.util.text.messageBuilder;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 public class flyspeedPlayer {
-    public static void  flysppedPlayer(Player p, String t){
+    public static void  flyspeedPlayer(Player p, String t){
     if (!p.hasPermission("atb.flyspeed")){
         p.sendMessage(messageBuilder.noPermission);
         return;
