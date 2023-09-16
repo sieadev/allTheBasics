@@ -62,6 +62,7 @@ public final class AllTheBasics extends JavaPlugin {
             getCommand("dm").setExecutor(new dm());
             getCommand("blind").setExecutor(new blind());
             getCommand("repair").setExecutor(new repair());
+            getCommand("flyspeed").setExecutor(new flyspeed());
         } catch (Exception e) {
             sendConsoleMessage("An error occurred when loading in Commands: " + e.getMessage());
             this.errors = errors + 1;

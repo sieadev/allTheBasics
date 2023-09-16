@@ -75,6 +75,8 @@ permissions:
         description: use /blind
       directmessage:
         description: use /dm
+      flyspeed:
+        description: use /flyspeed
 
 
 commands:
@@ -191,3 +193,7 @@ commands:
     permission: atb.repair
     usage: §c/repair
     description: Repair an item
+  flyspeed:
+    permission: atb.flyspeed
+    usage: §c/flyspeed
+    description: set your flyspeed
