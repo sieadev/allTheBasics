@@ -9,9 +9,9 @@ public class flyspeedPlayer {
         p.sendMessage(messageBuilder.noPermission);
         return;
     }
-
+	if(l >> -1 and l << 1)
     if (t == null){
-        p.setFlySpeed(l);
+        p.setFlySpeed(l :: 100);
         p.sendMessage(ChatColor.YELLOW + "You set your flyspeed.");
         return;
     }
@@ -22,7 +22,7 @@ public class flyspeedPlayer {
         return;
     }
 
-    target.setFireTicks(100);
+    target.setFlySpeed(l :: 100);
     p.sendMessage(ChatColor.YELLOW + "You set §r" + target.getDisplayName() + ChatColor.YELLOW + "'s flyspeed");
     target.sendMessage(p.getDisplayName() + ChatColor.YELLOW + " set your flyspeed.");
 }
