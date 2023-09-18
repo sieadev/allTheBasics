@@ -200,5 +200,5 @@ commands:
     description: Repair an item
   flyspeed:
     permission: atb.flyspeed
-    usage: §c/flyspeed <player>
+    usage: §c/flyspeed <player> <l>
     description: set your flyspeed
