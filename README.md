@@ -32,6 +32,7 @@ ATB contains everything necessary for your Minecraft Server!
     - /repair
     - /dm
     - /block
+    - /setflyspeed
  
 #### 3. Fully Customizable Config
     - change prefix

@@ -77,6 +77,8 @@ permissions:
         description: use /dm
       ignore:
         description: use /ignore
+      flyspeed:
+        description: use /flyspeed
 
 commands:
   heal:
@@ -196,3 +198,7 @@ commands:
     permission: atb.repair
     usage: §c/repair
     description: Repair an item
+  flyspeed:
+    permission: atb.flyspeed
+    usage: §c/flyspeed <player> <l>
+    description: set your flyspeed
