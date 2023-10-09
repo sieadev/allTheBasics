@@ -31,15 +31,37 @@ public class chatMessageBuilder {
         }
         if (p.hasPermission("atb.text.highlightNumbers") || highlightNumbers) {
             String color = "§5";
-            message = message.replaceAll("(\\d+)", color + "$1" + "§r");
+            String colorebefore = ChatColor.getLastColors(message);
+            message = message.replaceAll("(\\d+)", color + "$1" + colorebefore);
         }
         if (p.hasPermission("atb.text.emoji") || emoji) {
-            //will do this later
+            message = message.replace(":heart:", "❤");
+            message = message.replace(":java:", "☕");
+            message = message.replace(":yes:", "✔");
+            message = message.replace(":no:", "✖");
+            message = message.replace(":arrow:", "➜");
+            message = message.replace(":peace:", "✌");
+            message = message.replace(":shrug:", "¯\\_(ツ)_/¯");
+            message = message.replace(":tableflip:", "(╯°□°）╯︵ ┻━┻");
+            message = message.replace(":typing:", "✎...");
+            message = message.replace(":thinking:", "(0.o?)");
+            message = message.replace(":gimme:", "༼つ ◕_◕ ༽つ");
+            message = message.replace(":wizard:", "('-')⊃━☆ﾟ.*･｡ﾟ");
+            message = message.replace(":puffer:", "<('O')>");
+            message = message.replace(":sloth:", "( ⬩ ⊝ ⬩ )");
+            message = message.replace(":dog:", "(ᵔᴥᵔ)");
+            message = message.replace(":cat:", "= ＾● ⋏ ●＾ =");
         }
         if (highlightNames){
-            //e.setCancelled(true);
-            //send text message to players individually
-            //return;
+            for (int i = 0; i < p.getWorld().getPlayers().size(); i++){
+                String target = p.getWorld().getPlayers().get(i).getName();
+                if (message.contains(target)){
+                    String prefix = message.split(target)[0];
+                    String sufix = message.split(target)[1];
+                    String color = ChatColor.getLastColors(prefix);
+                    message = (prefix + "§e§l" + target + color + sufix);
+                }
+            }
         }
         return message;
     }

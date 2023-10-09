@@ -10,6 +10,7 @@ ATB contains everything necessary for your Minecraft Server!
     - Colorful Chat messages
     - Auto highlight numbers and other parameters
     - Auto Calculate simple Math (e.g. "20+14-7" will display as "27")
+    - Convert Emoji's
 #### 2. Commands:
     - /feed
     - /heal
@@ -37,7 +38,6 @@ ATB contains everything necessary for your Minecraft Server!
     - choose the way /freeze effects players
 	- customize chat: color, emoji, math, highlight
 ### Future updates may include
-    - Convert Emoji's
     - set language
     - Auto highlight playernames
 	- Setplayername
