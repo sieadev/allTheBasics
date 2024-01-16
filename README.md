@@ -2,6 +2,8 @@
 
 ATB contains everything necessary for your Minecraft Server!
 
+# Do not use unless you know what this is!
+## This project exists so I (siea) can teach people Spigot and Github and should not be used in production.
 
 
 ## Features
